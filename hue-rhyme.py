@@ -40,13 +40,13 @@ def get_first_syllable(word: str) -> str:
 
 
 def get_rhyme(word: str) -> str:
-    firt_syllable = get_first_syllable(word)
+    first_syllable = get_first_syllable(word)
     try:
-        rhyme = VOWEL_TO_RHYME[get_first_vowel(firt_syllable)]
+        rhyme = VOWEL_TO_RHYME[get_first_vowel(first_syllable)]
     except KeyError:
         return word
 
-    return word.replace(firt_syllable, rhyme, 1)
+    return word.replace(first_syllable, rhyme, 1)
 
 
 def wrap_lines(lines: list[str], max_width=49) -> list[str]:
