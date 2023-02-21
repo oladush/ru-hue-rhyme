@@ -3,7 +3,7 @@
 # ( ⊙ ‿ ⊙) ｡ ◯ +------------------------------------------------------------------------------------+
 #  (｡  ｡)
 
-import sys
+import sys, random
 
 VOWEL_TO_RHYME = {
     'а': 'хуя',
@@ -101,7 +101,13 @@ if __name__ == "__main__":
     if words:
         hue_words = [get_rhyme(word) for word in words]
     else:
-        hue_words = ["еблан?"]
+        hue_words = [
+            random.choice([
+                "еблан?", 
+                "ебаная жызнь",
+                "купил мужик шляпу, "
+                "а она ему как раз",
+                ])]
 
     for line in hue_say(' '.join(hue_words)):
         print(line)
